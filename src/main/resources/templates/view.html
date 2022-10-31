@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Lihat Data Mahasiswa</title>
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+	<div class="container">
+            <div class="row" style="border: 0px darkgrey solid; width: 50%; margin: 0 auto; padding: 30px;">
+                <div class="col-sm-12">
+                    <hr/>
+                    <h3 align="center" style="color: blue">Data Mahasiswa</h3>
+                    <hr/>
+                    
+                    <p align="center"><img alt="" th:src="@{'getimage/'+${data.photo}}" width="500" height="480"></p>
+                    
+                    <h3>Nama</h3>
+                    <h4 th:text="${data.name}"></h4>
+                            
+                    <h3>NIM</h3>
+                    <h4 th:text="${data.studentid}"></h4>
+
+                    <h3>Tanggal Lahir</h3>
+                    <h4 th:text="${data.dateofbirth}"></h4>
+                            
+                    <h3>Jenis Kelamin</h3>
+                    <h4 th:text="${data.gender}"></h4>
+                </div>
+            </div>
+	</div>
+    </body>
+</html>
